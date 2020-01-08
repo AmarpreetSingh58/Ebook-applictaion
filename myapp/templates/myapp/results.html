@@ -1,0 +1,31 @@
+{% extends 'myapp/base.html' %}
+
+{% block myhdg %}Hello {{name}} {% endblock %}
+
+{% block body_block %}
+    <h2>List of Books</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for book in booklist %}
+                <tr>
+                    <td>
+                        {{book.title}}
+                    </td>
+                    <td>
+                        {{book.category}}
+                    </td>
+                    <td>
+                        {{book.price}}
+                    </td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+{% endblock body_block %}

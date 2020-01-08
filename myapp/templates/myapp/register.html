@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+       <!--
+       <form action="{% url 'myapp:register_user' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_email">Email</label>
+                <input type="email" class="form-control" id="id_email" maxlength="150" value="{{form.field.email.value}}" required>
+            </div>
+            <div class="form-group">
+                <label for="id_password1">Password</label>
+                <input type="password" class="form-control" id="id_password1" value="{{form.fields.password1.value}}" required>
+            </div>
+            <div class="form-group">
+                <label for="id_password2">Confirm password</label>
+                <input type="password" class="form-control" id="id_password2" value="{{form.fields.password2.value}}" required>
+            </div>
+            <div class="form-group">
+                <label for="id_first_name">First Name</label>
+                <input type="text" class="form-control" id="id_first_name" value="{{form.fields.first_name.value}}" maxlength="100" required>
+            </div>
+            <div class="form-group">
+                <label for="id_last_name">Last Name</label>
+                <input type="text" class="form-control" id="id_last_name" value="{{form.fields.last_name.value}}" maxlength="100" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        -->
+        {% crispy form %}
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+{% endblock content %}

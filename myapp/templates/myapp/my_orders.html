@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+    <script>
+        $(document).ready(function() {
+            $('#orders_table').DataTable();
+        });
+    </script>
+{% endblock extrahead %}
+
+{% block breadcrumb %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">My Orders</li>
+        </ol>
+    </nav>
+{% endblock breadcrumb %}
+
+{% block content %}
+    {% if orders %}
+    <div class="row">
+        <div class="col-md-12">
+            <table id="orders_table" class="table table-stripes table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Books</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td>{{order.id}}</td>
+                        <td>
+                            <ul>
+                                {% for bo in order.books.all %}
+                                    <li>{{bo.title}}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td>{{order.get_order_type_display}}</td>
+                        <td>{{order.order_date_str}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

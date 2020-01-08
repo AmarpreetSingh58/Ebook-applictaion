@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block extrahead %}
+    {{block.supper}}
+    <script src="{% static 'myapp/datatablebuttons/js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'myapp/datatablebuttons/js/buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'myapp/datatablebuttons/js/jszip.min.js' %}"></script>
+    <script src="{% static 'myapp/datatablebuttons/js/pdfmake.min.js' %}"></script>
+    <script src="{% static 'myapp/datatablebuttons/js/vfs_fonts.js' %}"></script>
+    <script src="{% static 'myapp/datatablebuttons/js/buttons.html5.min.js' %}"></script>
+    <script src="{% static 'myapp/datatablebuttons/js/buttons.print.min.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'myapp/datatablebuttons/css/dataTables.bootstrap4.min.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/datatablebuttons/css/buttons.bootstrap4.min.css' %}">
+
+
+    <script>
+        $(document).ready(function() {
+            //$('#book_table').DataTable();
+            var table = $('#book_table').DataTable( {
+              lengthChange: false,
+              buttons: [ 'copy', 'csv', 'excel', 'pdf']
+            });
+ 
+            table.buttons().container().appendTo( '#book_table_wrapper .col-md-6:eq(0)' );
+        });
+    </script>
+{% endblock extrahead %}
+
+{% block breadcrumb %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">List Books</li>
+        </ol>
+    </nav>
+{% endblock breadcrumb %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <table id="book_table" class="table table-stripes table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Reviews</th>
+            {% if can_add_review %}
+              <th scope="col">Actions</th>
+            {% endif %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for book in booklist %}
+          <tr>
+            <td><a href="{% url 'myapp:detail' book.id %}">{{book.title}}</a></td>
+            <td>{{book.get_category_display}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.publisher}}</td>
+            <td><a href="{% url 'myapp:chk_reviews' book.id %}">{{book.num_reviews}}</a></td>
+            {% if can_add_review %}
+            <td>
+                  <a href="{% url 'myapp:add_review' book.id %}" class="btn btn-primary btn-sm">
+                    <small>add review</small>
+                  </a>
+            </td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+        </tbody>
+
+    </table>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<style>
+    .breadcrumb{
+        background-color:#383636;
+        color:#ffffff;
+    }
+    .jumbotron{
+        background-color:#383636;
+        color:#ffffff;
+    }
+</style>
+<div class="jumbotron">
+    <h1 class="jump text-center">Development Team</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+  <table class="table table-stripes table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Student ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>105103000</td>
+          <td>Aakarsha Mahajan</td>
+          <td>mahaj113@uwindsor.ca</td>
+        </tr>
+        <tr>
+            <td>105118938</td>
+            <td>Amarpreet Singh</td>
+            <td>singh1jy@uwindsor.ca</td>
+        </tr>
+        <tr>
+          <td>104934797</td>
+          <td>Fabio Ribeiro Santiago</td>
+          <td>santia11@uwindsor.ca</td>
+        </tr>
+        <tr>
+          <td>105099194</td>
+          <td>Sarath Pulikkal</td>
+          <td>pulikka@uwindsor.ca</td>
+        </tr>
+        <tr>
+          <td>105146209</td>
+          <td>Munish</td>
+          <td>munish@uwindsor.ca</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+{% endblock content %}

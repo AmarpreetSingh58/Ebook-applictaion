@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+
+<ul>
+    <li>Title: {{book.title}}</li>
+    <li>Price: {{book.price}}</li>
+    <li>Publisher: {{book.publisher}}</li>
+</ul>
+
+<!--
+<ul>
+    <li><a href="{% url 'myapp:index' %}">Index</a></li>
+    <li><a href="{% url 'myapp:about' %}">About</a></li>
+</ul>
+-->
+
+{% endblock %}

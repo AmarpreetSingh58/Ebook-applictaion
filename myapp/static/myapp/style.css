@@ -1,0 +1,28 @@
+/*
+style.css should define 
+default background color, 
+default text color and 
+default font size, color, style, position for <h1>  tags. Also define the following class: 
+In addition you can define other optional styles for other elements.
+*/
+
+body {
+    background: rgb(243, 235, 167);
+    color: brown;
+}
+
+h1 {
+    font-size: 16px;
+    color: burlywood;
+    font-style: italic;
+    position: relative;
+}
+
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
+
+li {
+    border: solid 1px;
+}

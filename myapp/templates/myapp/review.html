@@ -1,0 +1,9 @@
+{% extends 'myapp/base.html' %}
+
+{% block body_block %}
+    <form action="{% url 'myapp:review' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+{% endblock body_block %}

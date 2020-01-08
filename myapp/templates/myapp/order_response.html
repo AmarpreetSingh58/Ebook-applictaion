@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table">
+        <thead class="thead-dark">
+            <th>Books</th>
+            {% if order.order_type == 0 %}
+                <th>Price</th>
+            {% endif %}
+        </thead>
+        <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{book.title}}</td>
+                {% if order.order_type == 0 %}
+                    <td>{{book.price}}</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+        {% if order.order_type == 0 %}
+        <tfoot>
+            <tr class="table-dark">
+                <td>Total purchase:</td>
+                <td>{{total_purchase}}</td>
+            </tr>
+        </tfoot>
+        {% endif %}
+    </table>
+
+    
+{% endblock content %}

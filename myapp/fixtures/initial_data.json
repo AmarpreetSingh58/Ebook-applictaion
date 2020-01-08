@@ -1,0 +1,446 @@
+[
+{
+   "model": "myapp.publisher",
+   "pk": 1,
+   "fields": {
+      "name": "Wiley",
+      "website": "https://www.wiley.com/",
+      "city": "Hoboken",
+      "country": "USA"
+   }
+},
+{
+   "model": "myapp.publisher",
+   "pk": 2,
+   "fields": {
+      "name": "Pearson",
+      "website": "https://www.pearson.com/",
+      "city": "London",
+      "country": "England"
+   }
+},
+{
+   "model": "myapp.publisher",
+   "pk": 3,
+   "fields": {
+      "name": "Random House",
+      "website": "http://www.randomhousebooks.com/",
+      "city": "New York",
+      "country": "USA"
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 1,
+   "fields": {
+      "title": "Advanced Optical Networks",
+      "category": "S",
+      "num_pages": 110,
+      "price": "98.99",
+      "publisher": 1,
+      "description": null,
+      "num_reviews": 3
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 2,
+   "fields": {
+      "title": "Wireless Networks",
+      "category": "S",
+      "num_pages": 300,
+      "price": "187.54",
+      "publisher": 2,
+      "description": null,
+      "num_reviews": 2
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 3,
+   "fields": {
+      "title": "A New World",
+      "category": "T",
+      "num_pages": 75,
+      "price": "60.00",
+      "publisher": 3,
+      "description": null,
+      "num_reviews": 0
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 4,
+   "fields": {
+      "title": "Python Programming",
+      "category": "S",
+      "num_pages": 275,
+      "price": "125.99",
+      "publisher": 2,
+      "description": null,
+      "num_reviews": 5
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 5,
+   "fields": {
+      "title": "A Good Story",
+      "category": "F",
+      "num_pages": 155,
+      "price": "15.00",
+      "publisher": 3,
+      "description": null,
+      "num_reviews": 0
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 6,
+   "fields": {
+      "title": "Jane Austen",
+      "category": "B",
+      "num_pages": 360,
+      "price": "45.50",
+      "publisher": 3,
+      "description": null,
+      "num_reviews": 0
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 7,
+   "fields": {
+      "title": "Jane Eyre",
+      "category": "F",
+      "num_pages": 280,
+      "price": "9.99",
+      "publisher": 3,
+      "description": "",
+      "num_reviews": 0
+   }
+},
+{
+   "model": "myapp.book",
+   "pk": 8,
+   "fields": {
+      "title": "Art History",
+      "category": "O",
+      "num_pages": 430,
+      "price": "155.75",
+      "publisher": 1,
+      "description": "",
+      "num_reviews": 0
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 1,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$vDgROUSLb2lF$Nu7ajgBIjJxNihoy/TT9YxMcLoihCzMhLBhvDQrHSe4=",
+      "last_login": "2019-12-07T21:50:10.103Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "admin",
+      "last_name": "",
+      "email": "admin@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-09-25T16:45:38Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 2,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$M9msl2fsHvMM$2qYef4zdKGIQH/+07TjmvJYKuU9zkd1fpqell5M5boY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "john_smith",
+      "first_name": "John",
+      "last_name": "Smith",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-06-28T17:22:36Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 3,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$FfDdb2TVoGv9$FBZAtS3VIEP9FmwqPgbhENSb9Fd2dB/X/h5s1IkXO6U=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mary_hall",
+      "first_name": "Mary",
+      "last_name": "Hall",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-06-14T17:25:45Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 4,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$mfbs0If1qPFQ$XBf92qy1l6+KRDkAqEtFr0HiFtwUfNIUKEDGR9vWgx0=",
+      "last_login": "2019-12-07T21:38:33.421Z",
+      "is_superuser": false,
+      "username": "alan_jones",
+      "first_name": "Alan",
+      "last_name": "Jones",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-07-22T17:29:28Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 5,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$vuvgwnLdO3sn$2b0qaS1giD8ftre/ko/XLxj0lxH8+f6M7xev/i68gPA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "josh_jones",
+      "first_name": "Josh",
+      "last_name": "Jones",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-06-10T17:39:13Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 6,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$aHxWCFiQx3dj$AxmJHwDk7wQDhaOrPxy68VYcxqwdEy7SXj6JaF3xld0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bill_wang",
+      "first_name": "Bill",
+      "last_name": "Wang",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-10-02T17:52:07Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 7,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$dMncvvyNPjRF$eiw2aoX9HDMaAsCNlXi41ODCtjXjl8nzKUIv68BSFao=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "anne_wang",
+      "first_name": "Anne",
+      "last_name": "Wang",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-08-02T13:14:40Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 15,
+   "fields": {
+      "password": "pbkdf2_sha256$150000$OOrIlJoamHUQ$34f+d4LttdG97t/hUQMmw7iGm2WgbNU9SaGo7KA9bL0=",
+      "last_login": "2019-12-07T21:53:53.689Z",
+      "is_superuser": false,
+      "username": "fabio",
+      "first_name": "Fabio",
+      "last_name": "Santiago",
+      "email": "fabio@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-12-07T21:51:39.843Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 16,
+   "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2019-12-07T21:51:39.997Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 2,
+   "fields": {
+      "status": 2,
+      "address": "123 University Avenue",
+      "city": "Windsor",
+      "province": "ON",
+      "last_renewal": "2019-10-02",
+      "auto_renew": true,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": [
+         1,
+         2,
+         3,
+         4,
+         5
+      ]
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 3,
+   "fields": {
+      "status": 1,
+      "address": "456 Sunset Avenue",
+      "city": "Windsor",
+      "province": "ON",
+      "last_renewal": "2019-10-02",
+      "auto_renew": true,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": [
+         1,
+         2,
+         3,
+         4,
+         5,
+         6,
+         7,
+         8
+      ]
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 4,
+   "fields": {
+      "status": 1,
+      "address": "789 King Street",
+      "city": "Calgary",
+      "province": "AB",
+      "last_renewal": "2019-10-02",
+      "auto_renew": false,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": [
+         2
+      ]
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 5,
+   "fields": {
+      "status": 3,
+      "address": "456 Sunset Avenue",
+      "city": "Montreal",
+      "province": "QC",
+      "last_renewal": "2019-10-02",
+      "auto_renew": false,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": [
+         7,
+         8
+      ]
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 6,
+   "fields": {
+      "status": 2,
+      "address": null,
+      "city": "Edmononton",
+      "province": "AB",
+      "last_renewal": "2019-10-02",
+      "auto_renew": true,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": [
+         3,
+         5,
+         6,
+         7,
+         8
+      ]
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 7,
+   "fields": {
+      "status": 2,
+      "address": "102 Curry Avenue",
+      "city": "Edmononton",
+      "province": "AB",
+      "last_renewal": "2019-10-02",
+      "auto_renew": true,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": [
+         1
+      ]
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 15,
+   "fields": {
+      "status": 1,
+      "address": null,
+      "city": "Windsor",
+      "province": "ON",
+      "last_renewal": "2019-12-07",
+      "auto_renew": true,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": []
+   }
+},
+{
+   "model": "myapp.member",
+   "pk": 16,
+   "fields": {
+      "status": 1,
+      "address": null,
+      "city": "Windsor",
+      "province": "ON",
+      "last_renewal": "2019-12-07",
+      "auto_renew": true,
+      "groups": [],
+      "user_permissions": [],
+      "borrowed_books": []
+   }
+}
+]

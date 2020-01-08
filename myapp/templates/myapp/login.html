@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block nav %}
+{% endblock nav %}
+
+{% block content %}
+    <style>
+        h1 {
+            margin-top: 100px;
+            padding: 20px;
+            }
+    </style>
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Your username and password didn't match. Please try again.
+        </div>
+    {% endif %}
+    <div class="row justify-content-center">
+        <h1>Ebook app login</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <form id="id_login_form" action="{% url 'myapp:user_login' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Username: </label>
+                    <input name="username" type="username" id="username" value="{{username}}">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input name="password" type="password" id="password" required>
+                </div>
+                <input type="hidden" name="next" value="{{ next }}">
+                <div class="form-group">
+                    <a href="{% url 'myapp:forget_password' %}">Fogot you password ?</a>
+                </div>
+                
+                <input type="submit" value="login" class="btn btn-primary float-right" />
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+    
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}

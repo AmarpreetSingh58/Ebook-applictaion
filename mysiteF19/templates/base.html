@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ebookapp">
+    <title>Ebook App</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap/4.0.0/css/bootstrap.min.css' %}">
+    <script src="{% static 'jquery/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'popper/1.12.9/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/4.0.0/js/bootstrap.min.js' %}"></script>
+    
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="{% static 'fontawesome/releases/v5.7.2/css/all.css' %}">
+
+    <!-- jquery-datetimepicker -->
+    <link rel="stylesheet" href="{% static 'jquery-datetimepicker/css/jquery.datetimepicker.min.css' %}">
+    <script src="{% static 'jquery-datetimepicker/js/jquery.datetimepicker.full.min.js' %}"></script>
+
+    <!-- datatables -->
+    <link rel="stylesheet" href="{% static 'datatables/css/datatables.min.css' %}">
+    <script src="{% static 'datatables/js/datatables.min.js' %}"></script>
+
+    <style>
+      nav {
+        margin-bottom: 2em;
+      }
+    </style>
+    {% block extrahead %}
+    {% endblock extrahead %}
+</head>
+<body>
+
+    <!-- https://bootswatch.com/sandstone/ -->
+    {% block nav %}
+      {% include "menu.html" %}
+    {% endblock nav %}
+
+    <main role="main" class="container">
+
+        {% block breadcrumb %}
+        {% endblock breadcrumb %}
+
+        {% block bmessages %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message|safe }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endblock bmessages %}
+
+        {% block content %}
+        {% endblock content %}
+
+        {% block footer %}
+        {% endblock footer%}
+
+    </main><!-- /.container -->
+</body>
+
+</html>

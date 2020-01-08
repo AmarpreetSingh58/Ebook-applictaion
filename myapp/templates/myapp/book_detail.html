@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block breadcrumb %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Book Detail</li>
+        </ol>
+    </nav>
+{% endblock breadcrumb %}
+
+
+{% block content %}
+<h2>{{object.title}}</h2>
+<div class="row">
+        <div class="col-md-6">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="table-primary">Title:</th>
+                    <td>{{object.title}}</td>
+                </td>
+                <tr>
+                    <th class="table-primary">Category:</th>
+                    <td>{{object.category}}</td>
+                </tr>
+                <tr>
+                    <th class="table-primary">Price:</th>
+                    <td>{{object.price}}</td>
+                </tr>
+                <tr>
+                    <th class="table-primary">Pages:</th>
+                    <td>{{object.num_pages}}</td>
+                </tr>
+                <tr>
+                    <th class="table-primary">Publisher:</th>
+                    <td>{{object.publisher}}</td>
+                </tr>
+                <tr>
+                    <th class="table-primary">Number of Reviews:</th>
+                    <td>{{object.num_reviews}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<a class="btn btn-primary" href="{% url 'myapp:books' %}">Back</a>
+{% endblock %}

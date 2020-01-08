@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+
+
+{% block body_block %}
+    <form action="{% url 'myapp:placeorder' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+{% endblock %}
